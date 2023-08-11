@@ -17,7 +17,8 @@ This project aggregates and manages power source for virtual power plant.
 - Install Java 17 (if not installed) [link]([url](https://learn.microsoft.com/en-us/java/openjdk/install)https://learn.microsoft.com/en-us/java/openjdk/install)
 - Checkout the project locally
 - Navigate to project root folder via termial
-- Execute **./gradlew bootRun** from the terminal
+- Execute **./gradlew test** to run unit test from the terminal
+- Execute **./gradlew bootRun** to run application from the terminal
 - Use http://localhost:8080 as base url for accessing exposed rest api endpoints
 
 # Sample curl
