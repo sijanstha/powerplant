@@ -14,12 +14,15 @@ This project aggregates and manages power source for virtual power plant.
 - Mockito
 
 # Steps to run
-- Install Java 17 (if not installed) [link]([url](https://learn.microsoft.com/en-us/java/openjdk/install)https://learn.microsoft.com/en-us/java/openjdk/install)
+- Install Java 17 (if not installed, can be installed via https://learn.microsoft.com/en-us/java/openjdk/install)
 - Checkout the project locally
 - Navigate to project root folder via termial
 - Execute **./gradlew test** to run unit test from the terminal
 - Execute **./gradlew bootRun** to run application from the terminal
 - Use http://localhost:8080 as base url for accessing exposed rest api endpoints
+- To setup project using IDE (preferred Intellij)
+    - Open Intellij
+    - Click Open and navigate to the folder where you checkout the project and click OK
 
 # Sample curl
 ### Saving bulk power source (batteries)
