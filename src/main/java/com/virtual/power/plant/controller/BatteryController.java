@@ -21,7 +21,7 @@ public class BatteryController {
     @PostMapping("/bulk/load")
     public ApiResponse<BulkLoadResponseDto> load(@RequestBody List<BatteryDto> batteryDtos) {
         BulkLoadResponseDto bulkLoadResponseDto = batteryService.saveAll(batteryDtos);
-        String message = CollectionUtils.isEmpty(bulkLoadResponseDto.failedEntries()) ? "Data loaded successfully" : "Partial data loaded.";
+        String message = CollectionUtils.isEmpty(bulkLoadResponseDto.failedEntries()) ? "Data loaded successfully" : "Partial data loaded";
         return ApiResponse.<BulkLoadResponseDto>builder()
                 .body(bulkLoadResponseDto)
                 .message(message)
