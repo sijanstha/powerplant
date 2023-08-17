@@ -26,6 +26,7 @@ This project aggregates and manages power source for virtual power plant.
 
 # Sample curl
 ### Saving bulk power source (batteries)
+```bash
 curl --location 'localhost:8080/api/battery/bulk/load' \
 --header 'Content-Type: application/json' \
 --data '[
@@ -85,31 +86,15 @@ curl --location 'localhost:8080/api/battery/bulk/load' \
         "capacity": 85000
     }
 ]'
-
-Response: {
-    "body": {
-        "savedList": [],
-        "failedEntries": [
-            {
-                "reason": "Name cannot be empty or null",
-                "entry": {
-                    "id": 0,
-                    "name": null,
-                    "postcode": null,
-                    "capacity": 0
-                }
-            }
-        ]
-    },
-    "message": "Partial data loaded.",
-    "timestamp": "2023-08-11T15:13:59.295109Z"
-}
-
+```
 
 ### Quering battery source using post code range
+```bash
 curl --location 'localhost:8080/api/battery?from_post_code=6000&to_post_code=6100'
-
-Response: {
+```
+#### Response: 
+```json
+{
     "body": {
         "data": [
             {
@@ -150,3 +135,4 @@ Response: {
     "message": "Fetched successfully",
     "timestamp": "2023-08-11T16:04:05.911479Z"
 }
+```
